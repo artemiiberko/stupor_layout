@@ -207,6 +207,9 @@ h6 {
   width: calc(100% - 180px - 30px);
   height: calc(100% - 100px);
   padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -721,7 +724,7 @@ h6 {
 }
 
 .label-input-wrap > .block-input {
-  width: 140px;
+  width: 160px;
 }
 .label-input-wrap > .block-text {
   min-width: 160px;
