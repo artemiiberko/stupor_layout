@@ -134,6 +134,7 @@ h6 {
 
 .top-menu .block-button {
   padding: 5px 25px;
+  background-color: #565656;
 }
 
 .top-menu .block-button.active {
@@ -370,7 +371,7 @@ h6 {
 
 .block-button {
   flex: 1 1 40%;
-  background-color: #565656;
+  background-color: #00000033;
   font-family: "Blender Pro";
   font-size: 20px;
   font-weight: 400;
@@ -1272,11 +1273,28 @@ input[type="range"]:disabled::-moz-range-thumb {
   }
 }
 
+.window-block .loader {
+  display: none;
+}
+
 .loader {
   width: 200px;
   height: 200px;
   flex: 1;
   margin-top: 150px
+}
+
+.loading {
+  display: flex;
+  background-color: transparent;
+}
+
+.loading * {
+  display: none;
+}
+
+.loading .loader {
+  display: block;
 }
 
 .glass {
