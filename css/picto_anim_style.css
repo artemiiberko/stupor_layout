@@ -335,13 +335,13 @@ h6 {
  transition-delay: 0s;
 }
 
-.without_hover .hide_title {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(0) translateX(100%);
+.open-picto .sub-picto-wrapper {
+  transform: scale(1) rotate(0deg) !important;
 }
 
-.show_subs {
-  transform: scale(1) rotate(0deg) !important;
+.open-picto .picto-title {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0) translateX(100%);
 }
 
 .with_hover .sub-picto-wrapper {
