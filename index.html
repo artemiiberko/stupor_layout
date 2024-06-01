@@ -16,17 +16,30 @@
 
   <body>
     <div class="App">
-      <div class="top-menu glass shadow">
+      <div class="top-menu shadow">
         <div class="logo"></div>
         <div class="top-menu-buttons-wrap">
-          <!-- add class 'active' to make button dark -->
-          <div class="block-button active">Карта</div>
+          <!-- add class 'active' to change color to active -->
+          <div class="block-button">Карта</div>
           <div class="block-button">Камеры</div>
-          <div class="block-button active">Настройки</div>
+          <div class="block-button">Настройки</div>
+          <div class="block-button active">Диагностика</div>
         </div>
         <div class="time-wrapper">
           <div class="time">18:47</div>
           <div class="date">20.02.24</div>
+        </div>
+        <div class="top-menu-buttons-wrap-right">
+          <!-- add class 'active' to change color to active -->
+          <div class="block-button">Белый список</div>
+        </div>
+        <div class="top-menu-account-wrap">
+          <!-- add class 'active' to change color to active -->
+          <div class="block-button account-button">
+            <img src="img/user.svg" />
+            Оператор 1
+            <img src="img/arrow_down.svg" />
+          </div>
         </div>
       </div>
       <!-- /* add class 'hide' to hide side menu */ -->
@@ -157,22 +170,22 @@
         <div class="left-side-icons-wrap">
           <!-- {/* add class "active" for active menu item
             delete class "active" for other menu items */} -->
-          <div class="left-side-icon glass active">
+          <div class="left-side-icon active">
             <img src="./img/ls1.svg" />
           </div>
-          <div class="left-side-icon glass">
+          <div class="left-side-icon">
             <img src="./img/ls2.svg" />
           </div>
-          <div class="left-side-icon glass">
+          <div class="left-side-icon">
             <img src="./img/ls3.svg" />
           </div>
-          <div class="left-side-icon glass">
+          <div class="left-side-icon">
             <img src="./img/ls4.svg" />
           </div>
-          <div class="left-side-icon glass">
+          <div class="left-side-icon">
             <img src="./img/ls5.svg" />
           </div>
-          <div class="left-side-icon glass">
+          <div class="left-side-icon">
             <img src="./img/ls6.svg" />
           </div>
         </div>
@@ -314,17 +327,18 @@
         <div class="right-side-icons-wrap">
           <!-- {/* add class "active" for active menu item
             delete class "active" for other menu items */} -->
-          <div class="right-side-icon glass active">
+          <div class="right-side-icon active">
             <img src="./img/rs1.svg" />
           </div>
-          <div class="right-side-icon glass">
+          <div class="right-side-icon">
             <img src="./img/rs2.svg" />
           </div>
-          <div class="right-side-icon glass">
+          <div class="right-side-icon">
             <img src="./img/rs3.svg" />
           </div>
         </div>
       </div>
+      <!-- {/* delete class 'display-none' to see this window */} -->
       <div class="window-wrap glass shadow display-none">
         <div class="window-content">
           <div class="window-title">Панель настройки РЧ «Skyeye Skycope» ПАК «Ступор»</div>
@@ -464,7 +478,7 @@
           </div>
         </div>
       </div>
-      <!-- {/* delete class 'display-none' to see whis window */} -->
+      <!-- {/* delete class 'display-none' to see this window */} -->
       <div class="window-wrap glass shadow display-none">
         <div class="window-content">
           <div class="window-title">Настройки системы</div>
@@ -727,7 +741,202 @@
           </div>
         </div>
       </div>
-
+      <!-- {/* delete class 'display-none' to see this window */} -->
+      <div class="window-wrap glass shadow">
+        <div class="window-content">
+          <div class="window-title">Диагностика системы</div>
+          <div class="window-top">
+            <div class="window-buttons-group">
+              <div class="window-button active">Комплексная диагностика</div>
+            </div>
+            <div class="window-buttons-group gap10">
+              <div class="window-buttons-group">
+                <div class="window-button">Виртуальный помошник</div>
+              </div>
+              <div class="window-buttons-group">
+                <div class="window-button"><img src="./img/reload.svg" /> Перезагрузка системы</div>
+              </div>
+            </div>
+          </div>
+          <div class="window-main">
+            <!-- {/* delete class 'display-none' from loader and add 'display-none' to the first window-block to see the loader */} -->
+            <img src="./img/stupor_logo_loader.svg" class="loader" />
+            <!-- -----V----- -->
+            <div class="window-block display-none">
+              <div class="block-title highlighted">Диагностика выполнена успешно</div>
+              <div class="block-content">
+                <div class="block-text">Подключены следующие серверные узлы:</div>
+                <div class="window-block-table">
+                  <div class="table-item">
+                    <div class="table-id block-text">CN</div>
+                    <div class="table-name block-text">Центральный узел</div>
+                    <div class="table-ip block-text">localhost:8082</div>
+                  </div>
+                  <div class="table-item">
+                    <div class="table-id block-text">GH</div>
+                    <div class="table-name block-text">Главный обработчик</div>
+                    <div class="table-ip block-text">localhost:8082</div>
+                  </div>
+                  <div class="table-item">
+                    <div class="table-id block-text">IC</div>
+                    <div class="table-name block-text">Коннектор узлов</div>
+                    <div class="table-ip block-text">localhost:8082</div>
+                  </div>
+                </div>
+                <div class="block-text pb30 highlighted">Сервер работает ставильно</div>
+                <div class="block-text">Подключены следующие устройства:</div>
+                <div class="window-block-table">
+                  <div class="table-item">
+                    <div class="table-id block-text">1</div>
+                    <div class="table-name block-text">Камера</div>
+                    <div class="table-ip block-text">localhost:8186</div>
+                  </div>
+                  <div class="table-item">
+                    <div class="table-id block-text">2</div>
+                    <div class="table-name block-text">Камера</div>
+                    <div class="table-ip block-text">localhost:8187</div>
+                  </div>
+                  <div class="table-item">
+                    <div class="table-id block-text">3</div>
+                    <div class="table-name block-text">Камера</div>
+                    <div class="table-ip block-text">localhost:8183</div>
+                  </div>
+                </div>
+                <div class="block-text highlighted">Конфигурация исправна</div>
+              </div>
+            </div>
+            <div class="window-block">
+              <div class="block-title">Информация о программе</div>
+              <div class="block-content">
+                <div class="label-input-wrap">
+                  <div class="block-text">Версия ПО:</div>
+                  <div class="block-text">2.0</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Время создания:</div>
+                  <div class="block-text">27.04.24</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Ветка:</div>
+                  <div class="block-text">none</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Дата и время коммита:</div>
+                  <div class="block-text">none</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Имя коммита:</div>
+                  <div class="block-text">none</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Автор:</div>
+                  <div class="block-text">none</div>
+                </div>
+                <div class="label-input-wrap">
+                  <div class="block-text">Компания:</div>
+                  <div class="block-text">none</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- {/* delete class 'display-none' to see this window */} -->
+      <div class="window-wrap glass shadow display-none">
+        <div class="window-content">
+          <div class="window-title">Настройки системы</div>
+          <div class="window-top">
+            <div class="window-buttons-group">
+              <!-- add class 'active' to set button as active -->
+              <div class="window-button">Настройки</div>
+              <div class="window-button">Диагностика</div>
+              <div class="window-button">Внешний вид</div>
+              <div class="window-button active">Лицензия</div>
+            </div>
+            <div class="window-buttons-group">
+              <div class="window-button">Сохранить</div>
+            </div>
+          </div>
+          <div class="window-main">
+            <div class="window-block full-with-block">
+              <div class="block-title">Информация о лицензиях</div>
+              <div class="block-content">
+                <div class="inline-text-group pb30">
+                  <div class="block-text">Лицензия ПО СТУПОР МОД V 2.0.0.7:</div>
+                  <div class="block-text">Выдана: 05.02.23 до: 05.02.25</div>
+                  <div class="block-text underline-hover">подробнее</div>
+                </div>
+                <div class="block-text">Лицензии подключеных устройств</div>
+                <div class="block-table-wrap">
+                  <div class="window-block-table">
+                    <div class="table-item">
+                      <!-- add class 'red-text' to mark as expired -->
+                      <div class="table-id block-text">1</div>
+                      <div class="table-name block-text">Панель настройки РЧ «Skyeye Skycope» ПАК «Ступор»</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: 05.02.26</div>
+                    </div>
+                    <div class="table-item">
+                      <div class="table-id block-text">2</div>
+                      <div class="table-name block-text">Панель настройки РЧ «Skyeye Skycope» ПАК «Ступор»</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: 05.02.26</div>
+                    </div>
+                    <div class="table-item">
+                      <div class="table-id block-text">3</div>
+                      <div class="table-name block-text">Панель настройки РЧ «Skyeye Skycope» ПАК «Ступор»</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: 05.02.26</div>
+                    </div>
+                    <div class="table-item">
+                      <!-- add class 'red-text' to mark as expired -->
+                      <div class="table-id block-text red-text">4</div>
+                      <div class="table-name block-text">Камера Глаз Саурона</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: <span class="red-text">05.02.24</span></div>
+                    </div>
+                    <div class="table-item">
+                      <!-- add class 'red-text' to mark as expired -->
+                      <div class="table-id block-text red-text">5</div>
+                      <div class="table-name block-text">Камера Глаз Саурона</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: <span class="red-text">05.02.24</span></div>
+                    </div>
+                    <div class="table-item">
+                      <div class="table-id block-text">6</div>
+                      <div class="table-name block-text">Камера Глаз Саурона</div>
+                      <div class="table-ip block-text">Выдана: 05.02.23 до: 05.02.26</div>
+                    </div>
+                  </div>
+                  <div class="table-addition">
+                    <div class="table-addition-item">
+                      <!-- add class 'red-text' if licence is expired -->
+                      <div class="block-text">Активна</div>
+                      <!-- add class 'display-none' if licence is active -->
+                      <img class="display-none" src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                    <div class="table-addition-item">
+                      <div class="block-text">Активна</div>
+                      <img class="display-none" src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                    <div class="table-addition-item">
+                      <div class="block-text">Активна</div>
+                      <img class="display-none" src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                    <div class="table-addition-item">
+                      <div class="block-text red-text">Истекла</div>
+                      <img src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                    <div class="table-addition-item">
+                      <div class="block-text red-text">Истекла</div>
+                      <img src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                    <div class="table-addition-item">
+                      <div class="block-text">Активна</div>
+                      <img class="display-none" src="./img/reactivate.svg" class="button-reactivate" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content"></div>
     </div>
   </body>

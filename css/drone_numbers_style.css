@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*START*/
+
+.App {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/components_bg.png");
+  background-size: cover;
+}
+
+.components-wrap {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.map-drone-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 110px;
+  height: 110px;
+}
+
+.map-drone-wrap img {
+  width: 80px;
+  height: 80px;
+}
+
+.drone-number {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  color: #fff;
+  font-size: 22px;
+  font-family: "Blender Pro";
+  background-color: #f11d36;
+  padding: 0 4px;
+  line-height: 18px;
+  font-weight: 900;
+  min-width: 29.74px;
+  text-align: center;
+}
+
+.drone-number::before {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 8px solid #f11d36;
+}
+
+.drone-number::after {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 8px solid #f11d36;
+}

@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*START*/
+
+.App {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/components_bg.png");
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.form-wrap {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border: 1px solid #00fff080;
+  background-color: #0000001a;
+  padding: 5px 10px;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.input-wrap input {
+  width: 300px;
+  height: 40px;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Blender Pro";
+  font-size: 20px;
+  width: 100%;
+}
+
+.name {
+  font-family: "Blender Pro";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.login-buttons-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.login-buttons-wrap::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  width: 250px;
+  border-top: 1px solid #ffffff1a;
+}
+
+.login-buttons-wrap > *:hover {
+  cursor: pointer;
+  background-color: #474747;
+}
+
+.login-buttons-wrap > *:active {
+  background-color: #3b3b3b;
+}
+
+.login-button {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Blender Pro";
+  background-color: #565656;
+  padding: 7px 20px;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.fingerprint-button {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Blender Pro";
+  background-color: #565656;
+  padding: 7px 20px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #fff;
+  font-family: "Blender Pro";
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.recovery-button {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Blender Pro";
+  margin-right: 25px;
+  margin-bottom: 25px;
+  background-color: #565656;
+  padding: 7px 20px;
+  border-radius: 5px;
+}
+
+.recovery-button:hover {
+  cursor: pointer;
+  background-color: #474747;
+}
+
+.recovery-button:active {
+  background-color: #3b3b3b;
+}
